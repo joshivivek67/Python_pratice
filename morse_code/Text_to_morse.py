@@ -14,7 +14,7 @@ def covert_morse_code(dict,key):
     if key in dict.keys():
         return dict[key]
     else:
-        return "key not found" 
+        return f"{key}" 
 
 
 def get_code(text):
@@ -44,8 +44,6 @@ def get_code(text):
                 str1=covert_morse_code(numbers_key1,i)
             elif re.match(r'[A-Za-z0-9]',i) is None:
                 str1=covert_morse_code(characters_key,i)
-            else:
-                return "Invaild Characters"
             string = string + str1
         return string
 
